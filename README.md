@@ -20,7 +20,7 @@ This package simplifies error handling in a variety of contexts, including but n
 # Interface
 The package exports the function `errorToString(e)` where `e` is the error provided. 
 If `e` is an instance of type `Error` then the function will return a string in the format `errorName: message` where `errorName` and `message` correspond to the `name` and `message` properties of the `Error` object. 
-If `e` is not an instance of type `Error` then the function will return the contens of `e` as a string.
+If `e` is not an instance of type `Error` then the function will return the contents of `e` as a string.
 
 # Testing
 Tests can be found in `error_to_string.test.ts` located in `error_to_string/src` and should be run with sinon, mocha and nyc.
