@@ -17,7 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci
+        with:
+          persist-credentials: false
       - run: npm run cover:report
 
       - name: Run coverage extraction script
