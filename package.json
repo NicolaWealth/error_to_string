@@ -6,6 +6,11 @@
   "unpkg": "./dist/index.umd.js",
   "types": "./dist/types/index.d.ts",
   "source": "src/index.ts",
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-typescript"
+    ]
+  },
   "exports": {
     ".": {
       "require": "./dist/index.umd.js",
@@ -48,6 +53,7 @@
   },
   "devDependencies": {
     "@nicolawealth/code_coverage_extractor": "^2",
+    "@babel/plugin-transform-typescript": "^7.27.1",
     "@types/mocha": "^9",
     "@types/node": "^22",
     "@types/sinon": "^10",
@@ -55,16 +61,18 @@
     "eslint": "^9",
     "eslint-config-turbo": "^2",
     "microbundle": "^0.15.1",
-    "mocha": "^11.8.0",
-    "mocha-junit-reporter": "^2",
+    "mocha": "^12.0.0",
     "nyc": "^18.0.0",
     "sinon": "^22.1.0",
     "ts-node": "^10",
     "typescript": "^5"
   },
   "overrides": {
-    "diff": "^8.0.2",
-    "serialize-javascript": "^7.1.1"
+    "microbundle": {
+      "rollup-plugin-terser": {
+        "serialize-javascript": "^7.1.1"
+      }
+    }
   },
   "packageManager": "npm@10.9.0"
 }
