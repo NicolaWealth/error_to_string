@@ -6,5 +6,8 @@
     "declarationMap": false,
     "inlineSourceMap": false,
     "sourceMap": true
-  }
+  },
+  "exclude": [
+    "src/**/*.test.ts"
+  ]
 }
