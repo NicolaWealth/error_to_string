@@ -17,8 +17,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
       - run: npm ci
       - run: npm run cover:report
 
@@ -54,8 +52,5 @@ jobs:
           if ! git diff --quiet codecov/badge.json; then
             git add codecov/badge.json
             git commit -m "Automated commit"
-            AUTH_HEADER=$(printf 'x-access-token:%s' "$GITHUB_TOKEN" | base64 -w 0)
-            git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH_HEADER" push origin main
+            git push origin main
           fi
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
