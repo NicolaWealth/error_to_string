@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest 
     container:
       # Using Node JS Version 22
-      image: node:22 
+      image: node:22.12.0
     steps:
       # Checkout Code    
       - uses: actions/checkout@v4

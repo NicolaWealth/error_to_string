@@ -13,7 +13,7 @@ jobs:
     env:
       COV_MIN: 0
     container:
-      image: node:22
+      image: node:22.12.0
 
     steps:
       - uses: actions/checkout@v4
