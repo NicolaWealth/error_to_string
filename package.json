@@ -38,7 +38,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist/* && rm -f tsconfig.tsbuildinfo",
-    "build": "microbundle --format umd",
+    "build": "tsc -p tsconfig.types.json && rollup -c",
     "lint": "eslint src",
     "test": "mocha",
     "test-r": "mocha -R spec",
@@ -60,19 +60,15 @@
     "@typescript-eslint/eslint-plugin": "^8",
     "eslint": "^9",
     "eslint-config-turbo": "^2",
-    "microbundle": "^0.15.1",
     "mocha": "^12.0.0",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "rollup": "^4.52.5",
     "nyc": "^18.0.0",
     "sinon": "^22.1.0",
     "ts-node": "^10",
+    "tslib": "^2.8.1",
     "typescript": "^5"
-  },
-  "overrides": {
-    "microbundle": {
-      "rollup-plugin-terser": {
-        "serialize-javascript": "^7.1.1"
-      }
-    }
   },
   "packageManager": "npm@10.9.0"
 }
