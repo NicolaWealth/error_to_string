@@ -6,11 +6,6 @@
   "unpkg": "./dist/index.umd.js",
   "types": "./dist/types/index.d.ts",
   "source": "src/index.ts",
-  "babel": {
-    "plugins": [
-      "@babel/plugin-transform-typescript"
-    ]
-  },
   "exports": {
     ".": {
       "require": "./dist/index.umd.js",
@@ -53,7 +48,6 @@
   },
   "devDependencies": {
     "@nicolawealth/code_coverage_extractor": "^2",
-    "@babel/plugin-transform-typescript": "^7.27.1",
     "@types/mocha": "^9",
     "@types/node": "^22",
     "@types/sinon": "^10",
