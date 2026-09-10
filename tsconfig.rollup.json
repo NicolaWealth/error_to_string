@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.esm.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "inlineSourceMap": false,
+    "sourceMap": true
+  },
+  "exclude": [
+    "src/**/*.test.ts"
+  ]
+}

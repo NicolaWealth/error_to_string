@@ -6,18 +6,19 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   test:
     # Using Ubuntu
     runs-on: ubuntu-latest 
     container:
       # Using Node JS Version 22
-      image: node:22 
+      image: node:22.12.0
     steps:
       # Checkout Code    
-      - uses: actions/checkout@v3
-        with:
-          node-version: 22
+      - uses: actions/checkout@v4
       # Install Dependencies          
       - run: npm ci
       # Run Tests      

@@ -3,6 +3,11 @@
   "compilerOptions": {
     "outDir": "dist/types",
     "declaration": true,
-    "emitDeclarationOnly": true
-  }
+    "emitDeclarationOnly": true,
+    "composite": false,
+    "declarationMap": false
+  },
+  "exclude": [
+    "src/**/*.test.ts"
+  ]
 }

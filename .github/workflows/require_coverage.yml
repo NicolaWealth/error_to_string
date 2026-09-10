@@ -4,18 +4,19 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   coverage:
     runs-on: ubuntu-latest
     env:
       COV_MIN: 0
     container:
-      image: node:22
+      image: node:22.12.0
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          node-version: 22
+      - uses: actions/checkout@v4
       - run: npm ci
       - run: npm run cover:report
 
